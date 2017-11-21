@@ -1,3 +1,5 @@
+// NOTE: Not in use yet. Does not work.
+
 export default (element) => {
 
 	function getSiblingsOfSameTypeCount(element) {

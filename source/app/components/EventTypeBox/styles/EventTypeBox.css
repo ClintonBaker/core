@@ -1,8 +1,8 @@
 .EventTypeBox {
-	max-width: 60px;
-	max-height: 60px;
-	min-width: 60px;
-	min-height: 60px;
+	max-width: 48px;
+	max-height: 48px;
+	min-width: 48px;
+	min-height: 48px;
   box-shadow: squareShadow;
   transition: all 0.3s;
   border-radius: 1px;
@@ -30,14 +30,9 @@
 
 .green {
 	background: greenGradient;
-	box-shadow: -3px -4px 24px -4px rgba(132,167,221,0.5), 3px 4px 24px -7px rgba(184,245,212,0.7)
+	box-shadow: -3px -4px 24px -4px rgba(132,167,221,0.5), 3px 4px 24px -7px rgba(184,245,212,0.7);
 }
 
 .icon {
-	max-width: 24px;
-	max-height: 24px;
-	min-width: 24px;
-	min-height: 24px;
-	height: 24px;
-	width: 24px;
+	filter: iconShadow;
 }

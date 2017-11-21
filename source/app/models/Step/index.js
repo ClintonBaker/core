@@ -1,4 +1,4 @@
-import { Model } from '@app/utilities/store';
+import { Model } from '@app/utilities';
 
 import * as actions from './actions';
 import * as getters from './getters';

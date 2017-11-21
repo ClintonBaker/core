@@ -1,14 +1,8 @@
 import * as React from 'react';
 import { observer, inject } from 'mobx-react';
 
-import PlayIcon from '@app/assets/play-button.svg';
-import PauseIcon from '@app/assets/pause.svg';
-import StopIcon from '@app/assets/stop.svg';
-import ReplayIcon from '@app/assets/replay.svg';
-import BookmarkIcon from '@app/assets/agenda.svg';
-import RecordStoppedIcon from '@app/assets/record-stopped.svg';
-import RecordPlayingIcon from '@app/assets/record-playing.svg';
-import SaveIcon from '@app/assets/save.svg';
+import { Icon } from '@app/components/Icon';
+import PlayIcon from '@app/assets/svgs/circle_play.svg';
 import './styles/ActionBar.css';
 
 @inject('$tests')
@@ -23,20 +17,18 @@ export default class ActionBar extends React.Component {
 					<div styleName='left'>
 						<Choose>
 							<When condition={!props.$tests.recording}>
-								<RecordStoppedIcon styleName='action' width={32} height={32} onClick={toggleRecording} />
+								<Icon styleName='action' name='record' size='medium' onClick={toggleRecording} />
 							</When>
 							<Otherwise>
-								<RecordPlayingIcon styleName='action recording' width={38} height={38} onClick={toggleRecording} />
+								<Icon styleName='action recording' name='record' size='medium' onClick={toggleRecording} />
 							</Otherwise>
 						</Choose>
-						<PlayIcon styleName='action' width={32} height={32} />
-						<PauseIcon styleName='action' width={32} height={32} />
-						<StopIcon styleName='action' width={32} height={32} />
-						<ReplayIcon styleName='action' width={32} height={32} />
+						<Icon styleName='action' name='play' size='medium' />
+						<Icon styleName='action' name='pause' size='medium' />
+						<Icon styleName='action' name='stop' size='medium' />
 					</div>
 					<div styleName='right'>
-						<BookmarkIcon styleName='action' width={32} height={32} fillOpacity={0.4} />
-						<SaveIcon styleName='action' width={32} height={32} fillOpacity={0.4} />
+						<Icon styleName='action' name='bookmark' size='medium' />
 					</div>
 				</div>
 			</div>

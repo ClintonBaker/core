@@ -1,15 +1,16 @@
 .ActionBar {
-	height: 60px;
+	height: 120px;
 	display: row;
 	align-items: center;
 	justify-content: center;
 	padding: 0 16px;
 	position: fixed;
-	bottom: 32px;
+	bottom: 0px;
 	left: 0;
 	right: 0;
 	width: 100vw;
 	z-index: 100;
+	background: darkToTransparentGradient;
 }
 
 .bar {
@@ -21,23 +22,26 @@
 	justify-content: space-between;
 	padding: 0 32px;
 	border-radius: 75px;
-	height: 64px;
+	height: 60px;
+	max-height: 60px;
+	margin-top: 12px;
 	position: relative;
-	box-shadow: 2px 3px 24px -8px rgba(0,0,0,0.5), 0px 2px 24px 4px rgba(41, 46, 62, 0.05);
+	box-shadow: 2px 3px 30px -8px rgba(0,0,0,0.25);
 
 }
 
 .action {
 	transition: all 0.3s;
-}
-
-.action:not(.recording) {
 	max-height: 32px;
 	max-width: 32px;
 	min-height: 32px;
 	min-width: 32px;
 	height: 32px;
 	width: 32px;
+}
+
+.action {
+	fill: white;
 }
 
 .action:not(:last-of-type) {
@@ -56,11 +60,8 @@
 }
 
 .action.recording {
-	position: relative;
-	right: 3px;
-	-webkit-animation: rotation 1.5s infinite ease-in-out;
+	-webkit-animation: rotation 1.5s infinite linear;
 	filter: drop-shadow(0px 0px 16px rgba(232,69,137,0.95));
-	margin-right: 26px;
 }
 
 
